@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>cookies</title>
+  <style media="screen">
+  tr.title {
+  text-align: center;
+  }
+  form.cookie.collector {
+    text-align: right;
+  }
+  </style>
+</head>
+
+
+<body>
+  <h1>Get your cookies here!</h1>
+  <table>
+    <tbody>
+      <tr class="title">
+        <td>Quantity</td>
+        <td>Type</td>
+        <td>Add Cookie</td>
+      </tr>
+      <tr>
+        <td>
+          <%= newCookie["cookies"]["chocolateChip"] %>
+        </td>
+        <td style="text-align:center">Chocolate Chip</td>
+        <td>
+          <form class="cookie collector" action="/newCookie/chocolateChip" method="post">
+            <button type="submit" name="chocolateChip">Buy 1</button>
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <%= newCookie["cookies"]["oatmeal"] %>
+        </td>
+        <td style="text-align:center">Oatmeal</td>
+        <td>
+          <form class="cookie collector" action="/newCookie/oatmeal" method="post">
+            <button type="submit" name="oatmeal">Buy 1</button>
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <%= newCookie["cookies"]["sugar"] %>
+        </td>
+        <td style="text-align:center">Sugar</td>
+        <td>
+          <form class="cookie collector" action="/newCookie/sugar" method="post">
+            <button type="submit" name="sugar">Buy 1</button>
+          </form>
+        </td>
+      </tr>
+
+
+    </tbody>
+
+  </table>
+
+  <form class="guilty" action="/reset" method="post">
+    <label>Feeling guilty?</label><button type="submit" name="reset" style="margin:0px 15px">Reset</button>
+  </form>
+
+
+
+
+
+
+</body>
+
+</html>
